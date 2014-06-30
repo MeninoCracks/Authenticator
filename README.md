@@ -14,10 +14,10 @@ This project was made for Bukkit 1.7.9, as no similar plugins were available to 
 FEATURES
 =============
 
-/login <password>         Logs into the server if the password is correct
+/login password 
 
 
-/register <password>      Registers the account to password (if the account is not already registered to another password)
+/register password     
 
 
 When a player joins the server, they will not be able to move, break blocks, drop items, take damage, chat, use commands, etc until they login.  Each username can only be registered once.  This protects offline servers from
