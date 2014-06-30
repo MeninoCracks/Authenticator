@@ -1,0 +1,21 @@
+name: Authenticator
+main: x86asm.plugin.authenticator.Authenticator
+version: 1
+
+commands:
+  login:
+    description: Login to the server.
+    usage: /login password
+    permission: authenticator.login
+  register:
+    description: Register to the server.
+    usage: /register password
+    permission: authenticator.register
+    
+permissions:
+  authenticator.login:
+    default: true
+    description: Allows you to login to the server.
+  authenticator.register:
+    default: true
+    description: Allows you to register to the server.
