@@ -14,11 +14,5 @@ This project was made for Bukkit 1.7.9, as no similar plugins were available to 
 FEATURES
 =============
 
-/login password 
-
-
-/register password     
-
-
-When a player joins the server, they will not be able to move, break blocks, drop items, take damage, chat, use commands, etc until they login.  Each username can only be registered once.  This protects offline servers from
+When a player joins the server, they will be prompted with a message telling them that they must register their account and then login.   They will not be able to move, break blocks, drop items, take damage, chat, use commands, etc until they login.  Each username can only be registered once.  This protects offline servers from
 malicious players who will try to login to accounts that they do not own.
