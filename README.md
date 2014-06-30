@@ -15,7 +15,10 @@ FEATURES
 =============
 
 /login <password>         Logs into the server if the password is correct
+
+
 /register <password>      Registers the account to password (if the account is not already registered to another password)
+
 
 When a player joins the server, they will not be able to move, break blocks, drop items, take damage, chat, use commands, etc until they login.  Each username can only be registered once.  This protects offline servers from
 malicious players who will try to login to accounts that they do not own.
