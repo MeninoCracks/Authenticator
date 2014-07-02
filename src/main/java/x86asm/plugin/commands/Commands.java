@@ -14,7 +14,6 @@ package x86asm.plugin.commands;
 
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.ChatColor;
-import org.bukkit.GameMode;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -132,14 +131,10 @@ public class Commands implements CommandExecutor {
 	/**
 	 * Logs the player into the game and adds them
 	 * to the login list so that our hooks in Events.java
-	 * do not effect them.  We also set the players mode
-	 * back to survival, since they are put into creative
-	 * mode while logging in so that monsters cannot kill them
-	 * as they try to login or register.
+	 * do not effect them.  
 	 * @param player
 	 */
-	private void loginPlayer(Player player) {
-		player.setGameMode(GameMode.SURVIVAL);
+	private void loginPlayer(Player player) {		
 		player.sendMessage(ChatColor.GREEN + "Logged in!");
 		PlayerList.getInstance().add(player);
 	}

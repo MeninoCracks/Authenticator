@@ -2,20 +2,12 @@
  * Author: Cyrus
  * Created: 6/29/2014
  * Purpose: Deny users who are not logged in various permissions such as
- *          moving, chatting, interacting with blocks, etc.
- *          Also, we set their mode to creative mode so that they don't die
- *          if they are attacked by monsters while logging in.
- *          
- *          The players mode is set to creative so that
- *          they do not die while logging in due to
- *          being incapacitated.  It is set to survival
- *          after they have logged in.
+ *          moving, chatting, interacting with blocks, etc. *          
  */
 
 package x86asm.plugin.events;
 
 import org.bukkit.ChatColor;
-import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -41,8 +33,7 @@ public class Events implements Listener {
 	 */
 	@EventHandler(priority = EventPriority.HIGHEST)
 	private void onPlayerJoin(PlayerJoinEvent event) {
-		Player player = event.getPlayer();		
-		player.setGameMode(GameMode.CREATIVE);
+		Player player = event.getPlayer();			
 		showLoginPrompt(player);		
 	}
 	
@@ -141,8 +132,8 @@ public class Events implements Listener {
 	private void onPlayerLogout(PlayerQuitEvent event) {
 		Player player = event.getPlayer();
 		PlayerList.getInstance().remove(player);
-	}
-		
+	}	
+			
 	/**
 	 * This shows the player a message telling them
 	 * that they must register or login to the game.
